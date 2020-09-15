@@ -37,6 +37,21 @@ class Reunion
   end
 
   def detailed_breakout
+    initialize_detailed_breakout_hash.each do |participant, value|
+      
+    end
+  end
 
+  private
+
+  def initialize_detailed_breakout_hash
+    detailed_breakout_hash = {}
+    activities.each do |activity|
+      activity.participants.each do |participant, value|
+        detailed_breakout_hash[participant] = []
+      end
+    end
+
+    detailed_breakout_hash
   end
 end
