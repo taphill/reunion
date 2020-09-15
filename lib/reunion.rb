@@ -26,4 +26,17 @@ class Reunion
 
     breakout_costs
   end
+
+  def summary
+    output = ""
+    breakout.each do |participant, amount_owed|
+      output += "#{participant}: #{amount_owed}\n"
+    end
+
+    output.chop
+  end
+
+  def detailed_breakout
+
+  end
 end
