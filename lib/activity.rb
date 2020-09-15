@@ -17,5 +17,14 @@ class Activity
   def split
     total_cost / participants.length 
   end
+
+  def owed
+    amounts_owed = {}
+    participants.each do |participant, paid|
+      amounts_owed[participant] = split - paid 
+    end
+
+    amounts_owed  
+  end
 end
 
