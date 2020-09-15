@@ -37,9 +37,8 @@ class Reunion
   end
 
   def detailed_breakout
-    initialize_detailed_breakout_hash.each do |participant, value|
-      
-    end
+require 'pry'; binding.pry
+
   end
 
   private
